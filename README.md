@@ -11,29 +11,29 @@ Ability to add one question as KnowledgeCheck to verify that students did the co
 ![](images/PowerAppScreenshotsKnowledgeCheck.jpg)
 
 ## Code snippets used inside the App. 
-```VB
-# 1. CourseList => TempalteFill. Create a background color for the selected course list
+```c#
+// 1. CourseList => TempalteFill. Create a background color for the selected course list
 If(ThisItem.IsSelected,LightBlue)
 
-# 2. CourseList => CheckBox => Default 
+// 2. CourseList => CheckBox => Default 
 LookUp(CourseResult, CourseID = ThisItem.ID).Completed
 
-# 3. CourseList => Knowledge Check Button => Visible 
+// 3. CourseList => Knowledge Check Button => Visible 
 If(LookUp(CourseResult, CourseID = CourseList.Selected.ID).Completed, false, true)
 
-# 4. CourseList => Knowledge Check Button => OnSelect
+// 4. CourseList => Knowledge Check Button => OnSelect
 NewForm(AnswerForm); Navigate(KnowledgeCheckScreen, ScreenTransition.Fade)
 
-# 5. KnowledgeCheckScreen => Title_DataCardX => DataCardValue4 => Default
+// 5. KnowledgeCheckScreen => Title_DataCardX => DataCardValue4 => Default
 CourseList.Selected.Title
 
-# 6. KnowledgeCheckScreen => CourseID_DataCardX => DataCardValueX => Default
+// 6. KnowledgeCheckScreen => CourseID_DataCardX => DataCardValueX => Default
 CourseList.Selected.ID
 
-# 7. KnowledgeCheckScreen => AnswerCheck => Default
+// 7. KnowledgeCheckScreen => AnswerCheck => Default
 If(First(CorrectAnswerForm.SelectedItems).Value = First(UserAnswerForm.SelectedItems).Value, true, false)
 
-# 8. KnowledgeCheckScreen => Person_DataCardX => DataCardValueX => DefaultSelectedItems
+// 8. KnowledgeCheckScreen => Person_DataCardX => DataCardValueX => DefaultSelectedItems
 If(
     AnswerForm.Mode=FormMode.New,
     {
@@ -43,7 +43,7 @@ If(
     Parent.Default
 )
 
-# 9. KnowledgeCheckScreen => SubmitAnswer => OnSelect
+// 9. KnowledgeCheckScreen => SubmitAnswer => OnSelect
 If(
     AnswerCheck.Value = true,
     SubmitForm(AnswerForm);
@@ -63,9 +63,8 @@ If(
 ); 
 ```
 
-
 ## If you want to import the App
-```
+```bash
 # 1. Go to PowerApps.com and login with your business account
 #    Or create a community edition account https://powerapps.microsoft.com/sv-se/communityplan/
 http://powerapps.com
