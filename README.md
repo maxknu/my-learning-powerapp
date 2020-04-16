@@ -1,12 +1,12 @@
-## App in A Day
-Workshop material from 2020-04-16 PowerApp In A Day.
-
-[[/images/PowerAppScreenshotsMain.jpg|My Learning PowerApp]]
-
-## Description
+# Description
 Simple Canvas app based on two Sharepoint Lists to create "My Learning" portal. 
 It will grab published courses from a Sharepoint list, display for the logged in user. 
 Ability to add one question as KnowledgeCheck to verify that students did the course.
+
+## Screenshots
+![](images/PowerAppScreenshotsInTeams.jpg)
+![](images/PowerAppScreenshotsMain.jpg)
+![](images/PowerAppScreenshotsKnowledgeCheck.jpg)
 
 ## Code snippets used inside the App. 
 ```VB
