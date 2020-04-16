@@ -5,7 +5,9 @@ Ability to add one question as KnowledgeCheck to verify that students did the co
 
 ## Screenshots
 ![](images/PowerAppScreenshotsInTeams.jpg)
+
 ![](images/PowerAppScreenshotsMain.jpg)
+
 ![](images/PowerAppScreenshotsKnowledgeCheck.jpg)
 
 ## Code snippets used inside the App. 
@@ -78,9 +80,12 @@ Upload MyLearningApp.zip
 Open imported MyLearningApp 
 ```
 
-## Requirements for SharePoint
+# Requirements for SharePoint
 You will need to create two SharePoint lists "Course" an "CourseResult"
-Please check under images/sharepoint for screenshots on two sharepoint lists
+
+![](images/SharePoint/LearningApp-Site-Course-List.jpg)
+
+![](images/SharePoint/LearningApp-Site-CourseResult-List.jpg)
 
 ## "Course" SharePoint list
 ```
